@@ -73,3 +73,14 @@ bool isExtendedKey(DWORD key)
         return false;
     }
 }
+
+winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable> ToBoxValue(const std::vector<std::wstring> &list)
+{
+   winrt::Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> boxList = single_threaded_vector<Windows::Foundation::IInspectable>();
+   for (auto& val: list) 
+   {
+        boxList.Append(winrt::box_value(val));
+   }
+
+   return boxList;
+}

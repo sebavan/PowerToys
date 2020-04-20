@@ -1,6 +1,6 @@
 #pragma once
 #include "Helpers.h"
-#include "LayoutMap.h"
+#include <common\keyboard_layout.h>
 #include <interface/lowlevel_keyboard_event_data.h>
 
 // Enum type to store different states of the win key
